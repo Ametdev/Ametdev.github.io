@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<style>
+.project-detail {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.project-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.project-meta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.project-tech-tag {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.project-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.project-content ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-content li {
+  margin-bottom: 0.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  color: var(--secondary-color);
+}
+</style>
+
+<div class="project-detail">
+  <a href="/#projects" class="back-link">← Назад к проектам</a>
+
+  <div class="project-header">
+    <h1>{{ page.title }}</h1>
+    <div class="project-meta">
+      <span class="project-tech-tag">{{ page.tech }}</span>
+    </div>
+    <p style="margin-top: 1rem; color: var(--text-light);">{{ page.description }}</p>
+  </div>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+</div>
